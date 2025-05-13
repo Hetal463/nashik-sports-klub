@@ -1,0 +1,106 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --olive: #708A62;
+  --dark-olive: #556B2F;
+  --font-head: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font-body);
+}
+
+header {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header .logo {
+  height: 300px;
+  vertical-align: middle;
+}
+
+header h1 {
+  font-family: var(--font-head);
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-family: var(--font-accent);
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--olive);
+}
+
+.hero, .section-title {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: var(--font-head);
+}
+
+.subtext {
+  font-family: var(--font-body);
+  margin: 10px auto;
+}
+
+.buttons {
+  margin: 20px auto;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin: 10px;
+  border: 2px solid var(--olive);
+  border-radius: 5px;
+  font-family: var(--font-accent);
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.olive {
+  background-color: var(--olive);
+  color: var(--white);
+}
+
+.btn.outlined {
+  background-color: transparent;
+  color: var(--olive);
+}
+
+.facility-card, form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #f8f8f8;
+  border-left: 4px solid var(--olive);
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+}
