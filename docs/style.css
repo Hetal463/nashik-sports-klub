@@ -23,22 +23,28 @@ header {
 }
 
 header .logo {
-  height: 300px;
-  vertical-align: middle;
+  height: 150px; /* Adjusted for mobile */
+  margin-bottom: 10px;
 }
 
 header h1 {
   font-family: var(--font-head);
-  display: inline-block;
-  margin-left: 15px;
-  vertical-align: middle;
+  font-size: 1.5rem; /* Adjusted for better visibility */
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Mobile-friendly navigation */
+  justify-content: center;
+  gap: 10px;
 }
 
 nav a {
   color: var(--white);
   text-decoration: none;
-  margin: 0 15px;
   font-family: var(--font-accent);
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -48,12 +54,12 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 10px;
   background-color: #f4f4f4;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 1.8rem; /* Adjusted for mobile */
   font-family: var(--font-head);
   color: var(--black);
   margin-bottom: 10px;
@@ -63,123 +69,53 @@ nav a:hover {
   font-family: var(--font-body);
   margin: 10px auto;
   color: var(--black);
+  font-size: 1rem;
 }
 
 .buttons {
   margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .btn {
-  padding: 12px 24px;
-  margin: 10px;
-  border: 2px solid var(--olive);
-  border-radius: 5px;
-  font-family: var(--font-accent);
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn.olive {
-  background-color: var(--olive);
-  color: var(--white);
-}
-
-.btn.outlined {
-  background-color: transparent;
-  color: var(--olive);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .section-title {
   font-size: 2rem;
   font-family: var(--font-head);
-  color: var(--black); /* Ensure contrast with background */
+  color: var(--black);
   margin: 20px 0;
   text-align: center;
 }
 
 #about {
   text-align: center;
-  padding: 40px 20px;
-}
-
-#about h2 {
-  font-size: 2rem;
-  font-family: var(--font-head);
-  color: var(--black);
-}
-
-#about p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--black);
-}
-
-#contact {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  font-family: var(--font-head);
-  color: var(--black);
-}
-
-#contact p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  margin: 10px 0;
-}
-
-footer {
-  background-color: var(--black);
-  color: var(--white);
-  text-align: center;
-  padding: 15px;
+  padding: 20px 10px;
 }
 
 #sports-for-all {
   text-align: center;
-  padding: 40px 20px;
-}
-
-#sports-for-all h2 {
-  font-size: 2rem;
-  font-family: var(--font-head);
-  color: var(--black);
-  margin-bottom: 20px;
+  padding: 20px 10px;
 }
 
 .sports-container {
   display: flex;
-  justify-content: center; /* Align boxes in the center */
-  gap: 20px;
-  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+  flex-wrap: wrap; /* Responsive layout */
+  justify-content: center;
+  gap: 10px;
 }
 
 .sports-box {
   background-color: var(--olive);
   color: var(--white);
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
-  max-width: 300px;
-  width: 100%; /* Full width for smaller screens */
+  max-width: 280px;
   text-align: center;
-}
-
-.sports-box h3 {
-  font-family: var(--font-head);
-  margin-bottom: 10px;
-}
-
-.sports-box h4 {
-  font-family: var(--font-head);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.sports-box p {
-  font-family: var(--font-body);
-  margin: 5px 0;
 }
