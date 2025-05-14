@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const facilitySelect = document.getElementById('facility');
 
   async function disableBookedSlots() {
-    const res = await fetch('http://localhost:5000/api/bookings');
+    const res = await fetch('https://nashik-sports-klub.onrender.com/api/bookings');
     const bookings = await res.json();
     const selectedDate = dateInput.value;
     const selectedFacility = facilitySelect.value;
