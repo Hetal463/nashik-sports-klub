@@ -94,6 +94,38 @@ nav a:hover {
   text-align: center;
 }
 
+#sports-for-all {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.sports-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.sports-box {
+  background-color: var(--olive);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.sports-box h3 {
+  font-family: var(--font-head);
+  margin-bottom: 10px;
+}
+
+.sports-box p {
+  font-family: var(--font-body);
+  margin: 5px 0;
+}
+
 input, select, textarea {
   display: block;
   width: 100%;
