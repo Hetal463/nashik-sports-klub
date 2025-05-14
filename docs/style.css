@@ -31,32 +31,28 @@ header .logo {
 
 header h1 {
   font-family: var(--font-head);
-  font-size: 3.5rem;
+  font-size: 2.0rem;
   text-align: center;
 }
 
 /* Navigation Bar */
 nav {
   display: flex; /* Enables a row layout */
-  justify-content: center; /* Centers the buttons in the row */
-  gap: 10px; /* Adds space between buttons */
+  justify-content: center; /* Centers the links in the row */
+  gap: 20px; /* Adds space between links */
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 nav a {
-  display: inline-block; /* Ensures proper button-like behavior */
-  padding: 10px 20px;
   font-family: var(--font-accent);
   font-size: 1rem;
   color: var(--white);
   text-decoration: none; /* Removes underline */
-  background-color: var(--olive);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: var(--dark-olive);
+  color: var(--olive); /* Changes color on hover */
 }
 
 /* Hero Section */
@@ -276,12 +272,13 @@ nav a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   nav {
-    justify-content: space-evenly; /* Distributes buttons evenly for small screens */
+    flex-direction: column; /* Stacks links vertically on smaller screens */
+    align-items: center; /* Ensures the links are centered */
+    gap: 10px; /* Reduces the gap between links */
   }
 
   nav a {
-    width: 100px; /* Ensures buttons remain consistent in size */
-    text-align: center; /* Ensures text is centered */
+    font-size: 1.2rem; /* Increases font size for better readability */
   }
 
   .sports-container {
