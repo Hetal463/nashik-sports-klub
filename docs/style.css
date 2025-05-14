@@ -23,19 +23,18 @@ header {
 }
 
 header .logo {
-  height: 150px; /* Adjusted for mobile */
+  height: 150px;
   margin-bottom: 10px;
 }
 
 header h1 {
   font-family: var(--font-head);
-  font-size: 1.5rem; /* Adjusted for better visibility */
+  font-size: 1.5rem;
   text-align: center;
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap; /* Mobile-friendly navigation */
   justify-content: center;
   gap: 10px;
 }
@@ -59,7 +58,7 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-size: 1.8rem; /* Adjusted for mobile */
+  font-size: 1.8rem;
   font-family: var(--font-head);
   color: var(--black);
   margin-bottom: 10px;
@@ -75,7 +74,6 @@ nav a:hover {
 .buttons {
   margin: 20px auto;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
@@ -84,6 +82,16 @@ nav a:hover {
   padding: 10px 20px;
   font-size: 0.9rem;
   text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--olive);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark-olive);
 }
 
 .section-title {
@@ -92,30 +100,22 @@ nav a:hover {
   color: var(--black);
   margin: 20px 0;
   text-align: center;
-}
-
-#about {
-  text-align: center;
-  padding: 20px 10px;
-}
-
-#sports-for-all {
-  text-align: center;
-  padding: 20px 10px;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
 }
 
 .sports-container {
   display: flex;
-  flex-wrap: wrap; /* Responsive layout */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .sports-box {
   background-color: var(--olive);
   color: var(--white);
-  padding: 15px;
-  border-radius: 8px;
-  max-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
   text-align: center;
 }
