@@ -93,32 +93,9 @@ nav a:hover {
 .section-title {
   font-size: 2rem;
   font-family: var(--font-head);
-  color: var(--black);
+  color: var(--black); /* Ensure contrast with background */
   margin: 20px 0;
   text-align: center;
-}
-
-.facility-card {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
-  background-color: #f8f8f8;
-  border-left: 4px solid var(--olive);
-}
-
-input, select, textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 12px 0;
-  font-size: 16px;
-}
-
-form {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
-  background-color: #f8f8f8;
 }
 
 #about {
@@ -176,9 +153,9 @@ footer {
 
 .sports-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Align boxes in the center */
   gap: 20px;
-  align-items: center;
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
 }
 
 .sports-box {
@@ -186,13 +163,19 @@ footer {
   color: var(--white);
   padding: 20px;
   border-radius: 8px;
-  max-width: 600px;
-  width: 100%;
+  max-width: 300px;
+  width: 100%; /* Full width for smaller screens */
   text-align: center;
 }
 
 .sports-box h3 {
   font-family: var(--font-head);
+  margin-bottom: 10px;
+}
+
+.sports-box h4 {
+  font-family: var(--font-head);
+  font-style: italic;
   margin-bottom: 10px;
 }
 
