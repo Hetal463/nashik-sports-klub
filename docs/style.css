@@ -89,6 +89,42 @@ nav a:hover {
   background-color: var(--dark-olive);
 }
 
+/* CTA Buttons */
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; /* No underline */
+  color: var(--white); /* White text */
+  background-color: var(--olive); /* Olive green background */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-family: var(--font-accent); /* Accent font */
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-olive); /* Darker olive green on hover */
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; /* No underline */
+  color: var(--olive); /* Olive green text */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid var(--black); /* Black border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-family: var(--font-accent); /* Accent font */
+}
+
+.btn-secondary:hover {
+  color: var(--dark-olive); /* Darker olive green text on hover */
+  border-color: var(--dark-olive); /* Darker olive green border on hover */
+}
+
 /* Section Titles */
 .section-title {
   font-size: 2rem;
@@ -96,6 +132,7 @@ nav a:hover {
   color: var(--black);
   margin: 20px 0;
   text-align: center;
+  text-decoration: none; /* Explicitly remove underline */
 }
 
 .subtitle {
