@@ -199,6 +199,65 @@ section {
   margin: 10px 0;
 }
 
+/* Contact Us Section */
+#contact {
+  background-color: #f9f9f9; /* Light background color for contrast */
+  padding: 40px 20px;
+  text-align: center; /* Center-align all content */
+}
+
+#contact .section-title {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #555; /* Medium text color */
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#contact form {
+  margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+#contact textarea {
+  height: 100px;
+  resize: vertical; /* Allow resizing vertically */
+}
+
+#contact button {
+  background-color: #6b8e23; /* Olive green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #556b2f; /* Darker olive green for hover */
+}
+
 /* Booking Form */
 .booking {
   text-align: center;
