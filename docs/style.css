@@ -48,11 +48,14 @@ nav a {
   font-size: 1rem;
   color: var(--white);
   text-decoration: none; /* Removes underline */
-  transition: color 0.3s ease;
+  background: none; /* Remove button background */
+  padding: 0; /* Remove button-like padding */
+  border-radius: 0; /* Remove rounded corners */
+  transition: color 0.3s ease; /* Keep hover effect */
 }
 
 nav a:hover {
-  color: var(--olive); /* Changes color on hover */
+  color: var(--olive); /* Highlight on hover */
 }
 
 /* Hero Section */
@@ -78,6 +81,7 @@ nav a:hover {
 
 /* Buttons */
 .btn {
+  display: inline-block;
   padding: 10px 20px;
   font-size: 0.9rem;
   text-align: center;
@@ -93,8 +97,9 @@ nav a:hover {
   background-color: var(--dark-olive);
 }
 
-.btn-primary {
-  font-family: var(--font-accent);
+.btn-primary,
+.btn-secondary {
+  margin-top: 20px; /* Add space above buttons */
 }
 
 .btn-secondary {
@@ -185,52 +190,30 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
+/* Why NSK Section */
+#about {
+  text-align: center; /* Center-align content */
+  margin: 0 auto; /* Ensure proper centering */
+}
+
+/* Memberships Section */
+#memberships {
+  text-align: center; /* Center-align content */
+  margin: 0 auto; /* Ensure proper centering */
+}
+
 /* Contact Us Section */
 #contact {
-  background-color: #f9f9f9;
+  background-color: var(--olive); /* Olive green background */
   padding: 40px 20px;
-  text-align: center;
+  text-align: left; /* Align content to the left */
+  color: var(--white); /* Ensure text is readable */
 }
 
-#contact .section-title {
-  font-family: var(--font-head);
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-#contact p {
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  color: #555;
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-#contact input,
-#contact textarea {
-  width: 80%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: var(--font-body);
-}
-
-#contact button {
-  background-color: #6b8e23;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-family: var(--font-accent);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contact button:hover {
-  background-color: #556b2f;
+#contact .section-title,
+#contact p,
+#contact form {
+  margin-bottom: 20px; /* Add spacing between elements */
 }
 
 /* Manager Dashboard */
