@@ -89,6 +89,12 @@ nav a:hover {
   background-color: var(--dark-olive);
 }
 
+/* Add spacing above CTA buttons */
+.btn-primary,
+.btn-secondary {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
 /* CTA Buttons */
 .btn-primary {
   padding: 10px 20px;
@@ -163,6 +169,34 @@ section {
   border-radius: 10px;
   max-width: 300px;
   text-align: center;
+}
+
+/* Memberships Section */
+#memberships {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#memberships .section-title {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+#memberships .subtitle {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-bottom: 15px;
+}
+
+#memberships p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--black);
+  margin: 10px 0;
 }
 
 /* Booking Form */
