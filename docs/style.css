@@ -1,3 +1,4 @@
+/* Global Styles */
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -30,25 +31,32 @@ header .logo {
 
 header h1 {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   text-align: center;
 }
 
+/* Navigation Bar */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  display: flex; /* Enables a row layout */
+  justify-content: center; /* Centers the buttons in the row */
+  gap: 10px; /* Adds space between buttons */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 nav a {
-  color: var(--white);
-  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensures proper button-like behavior */
+  padding: 10px 20px;
   font-family: var(--font-accent);
   font-size: 1rem;
+  color: var(--white);
+  text-decoration: none; /* Removes underline */
+  background-color: var(--olive);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--olive);
+  background-color: var(--dark-olive);
 }
 
 /* Hero Section */
@@ -77,7 +85,7 @@ nav a:hover {
   padding: 10px 20px;
   font-size: 0.9rem;
   text-align: center;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   color: var(--white);
   background-color: var(--olive);
   border: none;
@@ -89,46 +97,19 @@ nav a:hover {
   background-color: var(--dark-olive);
 }
 
-/* Add spacing above CTA buttons */
-.btn-primary,
-.btn-secondary {
-  margin-top: 20px; /* Adjust the value as needed */
-}
-
-/* CTA Buttons */
 .btn-primary {
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none; /* No underline */
-  color: var(--white); /* White text */
-  background-color: var(--olive); /* Olive green background */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  font-family: var(--font-accent); /* Accent font */
-}
-
-.btn-primary:hover {
-  background-color: var(--dark-olive); /* Darker olive green on hover */
+  font-family: var(--font-accent);
 }
 
 .btn-secondary {
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none; /* No underline */
-  color: var(--olive); /* Olive green text */
-  background-color: transparent; /* Transparent background */
-  border: 2px solid var(--black); /* Black border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  font-family: var(--font-accent); /* Accent font */
+  color: var(--olive);
+  background-color: transparent;
+  border: 2px solid var(--black);
 }
 
 .btn-secondary:hover {
-  color: var(--dark-olive); /* Darker olive green text on hover */
-  border-color: var(--dark-olive); /* Darker olive green border on hover */
+  color: var(--dark-olive);
+  border-color: var(--dark-olive);
 }
 
 /* Section Titles */
@@ -138,20 +119,14 @@ nav a:hover {
   color: var(--black);
   margin: 20px 0;
   text-align: center;
-  text-decoration: none; /* Explicitly remove underline */
 }
 
 .subtitle {
   font-family: var(--font-body);
   font-size: 1.2rem;
-  color: var(--black); /* Changed to black */
+  color: var(--black);
   text-align: center;
   margin-bottom: 20px;
-}
-
-/* Center Align All Sections */
-section {
-  text-align: center; /* Center-align all sections */
 }
 
 /* Sports Container */
@@ -171,94 +146,7 @@ section {
   text-align: center;
 }
 
-/* Memberships Section */
-#memberships {
-  padding: 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-#memberships .section-title {
-  font-size: 2rem;
-  font-family: var(--font-head);
-  color: var(--black);
-  margin-bottom: 10px;
-}
-
-#memberships .subtitle {
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  color: var(--black);
-  margin-bottom: 15px;
-}
-
-#memberships p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--black);
-  margin: 10px 0;
-}
-
-/* Contact Us Section */
-#contact {
-  background-color: #f9f9f9; /* Light background color for contrast */
-  padding: 40px 20px;
-  text-align: center; /* Center-align all content */
-}
-
-#contact .section-title {
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
-  color: #333; /* Dark text color */
-  margin-bottom: 20px;
-}
-
-#contact p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  color: #555; /* Medium text color */
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-#contact form {
-  margin-top: 20px;
-}
-
-#contact input,
-#contact textarea {
-  width: 80%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-}
-
-#contact textarea {
-  height: 100px;
-  resize: vertical; /* Allow resizing vertically */
-}
-
-#contact button {
-  background-color: #6b8e23; /* Olive green */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-  background-color: #556b2f; /* Darker olive green for hover */
-}
-
-/* Booking Form */
+/* Booking Section */
 .booking {
   text-align: center;
   padding: 20px;
@@ -272,7 +160,8 @@ section {
   margin: 0 auto;
 }
 
-.booking input, .booking select {
+.booking input,
+.booking select {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid var(--black);
@@ -300,19 +189,99 @@ section {
   font-size: 1.1rem;
 }
 
-/* Footer */
-footer {
-  background-color: var(--black);
-  color: var(--white);
+/* Contact Us Section */
+#contact {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
   text-align: center;
+}
+
+#contact .section-title {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  max-width: 500px;
   padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-body);
+}
+
+#contact button {
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: var(--font-accent);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #556b2f;
+}
+
+/* Manager Dashboard */
+.dashboard {
+  padding: 2rem;
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dashboard th,
+.dashboard td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.dashboard th {
+  background: var(--olive);
+  color: var(--white);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.login-box {
+  max-width: 300px;
+  margin: 100px auto;
+  text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-evenly; /* Distributes buttons evenly for small screens */
+  }
+
+  nav a {
+    width: 100px; /* Ensures buttons remain consistent in size */
+    text-align: center; /* Ensures text is centered */
   }
 
   .sports-container {
