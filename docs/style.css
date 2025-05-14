@@ -46,15 +46,23 @@ nav a:hover {
   color: var(--olive);
 }
 
-.hero, .section-title {
+.hero {
   text-align: center;
   padding: 40px 20px;
-  font-family: var(--font-head);
+  background-color: #f4f4f4;
 }
 
-.subtext {
+.hero h2 {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.hero p.subtext {
   font-family: var(--font-body);
   margin: 10px auto;
+  color: var(--black);
 }
 
 .buttons {
@@ -82,16 +90,20 @@ nav a:hover {
   color: var(--olive);
 }
 
-.facility-card, form {
+.section-title {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.facility-card {
   margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   background-color: #f8f8f8;
   border-left: 4px solid var(--olive);
-}
-
-#about, #contact {
-  text-align: center;
 }
 
 input, select, textarea {
@@ -102,9 +114,89 @@ input, select, textarea {
   font-size: 16px;
 }
 
+form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #f8f8f8;
+}
+
+#about {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#about h2 {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+}
+
+#about p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--black);
+}
+
+#contact {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+}
+
+#contact p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
 footer {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
   padding: 15px;
+}
+
+#sports-for-all {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#sports-for-all h2 {
+  font-size: 2rem;
+  font-family: var(--font-head);
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.sports-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.sports-box {
+  background-color: var(--olive);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.sports-box h3 {
+  font-family: var(--font-head);
+  margin-bottom: 10px;
+}
+
+.sports-box p {
+  font-family: var(--font-body);
+  margin: 5px 0;
 }
