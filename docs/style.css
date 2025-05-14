@@ -90,6 +90,10 @@ nav a:hover {
   border-left: 4px solid var(--olive);
 }
 
+#about, #contact {
+  text-align: center;
+}
+
 input, select, textarea {
   display: block;
   width: 100%;
