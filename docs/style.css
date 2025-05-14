@@ -42,13 +42,12 @@ nav {
 
 nav a {
   color: var(--white);
-  text-decoration: none;
+  text-decoration: none; /* Remove underline */
   font-family: var(--font-accent);
   font-size: 1rem;
 }
 
 nav a:hover {
-  text-decoration: underline;
   color: var(--olive);
 }
 
@@ -78,7 +77,7 @@ nav a:hover {
   padding: 10px 20px;
   font-size: 0.9rem;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline */
   color: var(--white);
   background-color: var(--olive);
   border: none;
@@ -97,16 +96,19 @@ nav a:hover {
   color: var(--black);
   margin: 20px 0;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
 }
 
 .subtitle {
   font-family: var(--font-body);
   font-size: 1.2rem;
-  color: var(--olive);
+  color: var(--black); /* Changed to black */
   text-align: center;
   margin-bottom: 20px;
+}
+
+/* Center Align All Sections */
+section {
+  text-align: center; /* Center-align all sections */
 }
 
 /* Sports Container */
