@@ -5,112 +5,19 @@
   <title>Manager Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .dashboard { padding: 2rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
-    th { background: #708A62; color: #fff; }
-    .filters { display: flex; gap: 1rem; margin-top: 1rem; justify-content: center; }
-    .login-box { max-width: 300px; margin: 100px auto; text-align: center; }
-  </style>
 </head>
 <body>
-  <div class="login-box" id="loginBox">
-    <h2>Manager Login</h2>
-    <input type="password" id="passwordInput" placeholder="Enter Password" />
-    <button class="btn primary" onclick="login()">Login</button>
-  </div>
-
-  <section class="dashboard" style="display:none;" id="dashboard">
-    <h2>NSK Bookings</h2>
-    <div class="filters">
-      <input type="date" id="filterDate" />
-      <select id="filterFacility">
-        <option value="">All Facilities</option>
-        <option>Pickleball Court 1</option>
-        <option>Pickleball Court 2</option>
-        <option>Pickleball Court 3</option>
-        <option>Pickleball Court 4</option>
-        <option>Cricket Turf 1</option>
-        <option>Cricket Turf 2</option>
-      </select>
-      <button class="btn primary" id="exportBtn">Export to Excel</button>
-    </div>
-    <table id="bookingTable">
-      <thead>
-        <tr>
-          <th>Name</th><th>Phone</th><th>Date</th><th>Time</th><th>Facility</th><th>Booked At</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+  <header>
+    <img src="assets/logo.png" class="logo" alt="NSK Logo">
+    <h1>Nasik Sports Klub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+  <section style="text-align:center;padding:40px;">
+    <h2>Manager Area</h2>
+    <p>Booking management is currently disabled.</p>
   </section>
-
-  <script src="https://cdn.sheetjs.com/xlsx-latest/package/xlsx.full.min.js"></script>
-  <script>
-    const PASSWORD = "nsk@admin";
-
-    function login() {
-      const pass = document.getElementById('passwordInput').value;
-      if (pass === PASSWORD) {
-        document.getElementById('loginBox').style.display = 'none';
-        document.getElementById('dashboard').style.display = 'block';
-        loadBookings();
-      } else {
-        alert('Incorrect password');
-      }
-    }
-
-    async function loadBookings() {
-      const res = await fetch('http://localhost:5000/api/bookings');
-      const bookings = await res.json();
-      renderTable(bookings);
-
-      document.getElementById('filterDate').onchange = () => renderTable(bookings);
-      document.getElementById('filterFacility').onchange = () => renderTable(bookings);
-
-      document.getElementById('exportBtn').onclick = () => {
-        const filtered = filterData(bookings);
-        const sheet = XLSX.utils.json_to_sheet(filtered.map(b => ({
-          Name: b.name,
-          Phone: b.phone,
-          Date: b.date,
-          Time: b.time,
-          Facility: b.facility,
-          'Booked At': new Date(b.createdAt).toLocaleString()
-        })));
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, sheet, 'Bookings');
-        XLSX.writeFile(wb, 'NSK_Bookings.xlsx');
-      };
-    }
-
-    function filterData(bookings) {
-      const date = document.getElementById('filterDate').value;
-      const facility = document.getElementById('filterFacility').value;
-      return bookings.filter(b =>
-        (!date || b.date === date) &&
-        (!facility || b.facility === facility)
-      );
-    }
-
-    function renderTable(bookings) {
-      const tbody = document.querySelector('#bookingTable tbody');
-      const filtered = filterData(bookings);
-      tbody.innerHTML = '';
-      filtered.forEach(b => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${b.name}</td>
-          <td>${b.phone}</td>
-          <td>${b.date}</td>
-          <td>${b.time}</td>
-          <td>${b.facility}</td>
-          <td>${new Date(b.createdAt).toLocaleString()}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-  </script>
 </body>
 </html>
