@@ -154,38 +154,6 @@ nav a:hover {
   text-align: center;
 }
 
-/* Booking Section */
-.booking {
-  text-align: center;
-  padding: 20px;
-}
-
-.booking form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.booking input,
-.booking select {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid var(--black);
-  border-radius: 5px;
-}
-
-.booking button {
-  background-color: var(--olive);
-  color: var(--white);
-  cursor: pointer;
-}
-
-.booking button:hover {
-  background-color: var(--dark-olive);
-}
-
 /* Events Section */
 .events {
   text-align: center;
@@ -279,7 +247,4 @@ nav a:hover {
     max-width: 90%;
   }
 
-  .booking form {
-    width: 100%;
-  }
 }
